@@ -7,7 +7,7 @@ public class HelloEvent extends ListenerAdapter {
     public void onGuildMessageReceived(GuildMessageReceivedEvent event)
     {
         String messageSent=event.getMessage().getContentRaw();
-        if(messageSent.equalsIgnoreCase("hello") && !event.getMember().getUser().isBot())
+        if(messageSent.equalsIgnoreCase("-hello") && !event.getMember().getUser().isBot())
         {
             event.getChannel().sendMessage("Hello "+ event.getMember().getUser().getName()+" !").queue();
         }
