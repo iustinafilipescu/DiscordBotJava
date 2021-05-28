@@ -1,8 +1,11 @@
+import RSS.*;
 import com.jagrosh.jdautilities.command.CommandClient;
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
 import com.jagrosh.jdautilities.commons.waiter.EventWaiter;
 import commands.*;
 import events.UserInfoCommand;
+import music.JoinCommand;
+import music.PlayCommand;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 
@@ -27,6 +30,18 @@ public class Bot {
         builder.addCommand(new InviteCommand());
         builder.addCommand(new ImageCommand());
         builder.addCommand(new UserInfo(waiter));
+        builder.addCommand(new JavaRSS());
+        builder.addCommand(new PythonRSS());
+        builder.addCommand(new CloudComputingRSS());
+
+        builder.addCommand(new GameDevRSS());
+        builder.addCommand(new iOSRSS());
+        builder.addCommand(new ProgrammingRSS());
+        builder.addCommand(new SoftEngRSS());
+       builder.addCommand(new WebRSS());
+
+       builder.addCommand(new JoinCommand());
+       builder.addCommand(new PlayCommand());
 
         CommandClient client =builder.build();
 
