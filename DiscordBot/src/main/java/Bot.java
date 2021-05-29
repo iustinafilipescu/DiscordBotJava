@@ -43,6 +43,9 @@ public class Bot {
        builder.addCommand(new JoinCommand());
        builder.addCommand(new PlayCommand());
 
+       builder.addCommand(new ShowQuestions());
+        builder.addCommand(new QuestionCommand());
+
         CommandClient client =builder.build();
 
         jda.addEventListener(client);
