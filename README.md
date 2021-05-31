@@ -5,7 +5,9 @@ https://github.com/DV8FromTheWorld/JDA/wiki/8%29-List-of-Events
 https://github.com/DV8FromTheWorld/JDA
 
 Iustina:
+
 Pentru realizarea acestui bot am folosit JDA (Java Discord API) https://github.com/DV8FromTheWorld/JDA
+
 Pentru a putea dezvolta acest  bot, am creat un server pe discord si de pe siteul discord in sectiunea developer am creat un bot pe care l-am adaugat la server, iar pentru a putea adauga functionalitati botului am utilizat un proiect de tip Maven caruia i-am adaugat depedentele precum dependenta JPA.
 
 Proiectul este impartit pe pachete :
