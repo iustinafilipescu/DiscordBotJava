@@ -22,7 +22,7 @@ public class UserInfo extends Command {
         super.name = "user-info";
         super.help = "Get some information about a user";
         super.aliases = new String[]{"userinfo"};
-        super.category = new Category("Members");
+        super.category = new Category("About server and users");
         super.cooldown = 10;
         super.arguments = "[name]";
         this.waiter = waiter;
@@ -37,10 +37,12 @@ public class UserInfo extends Command {
         waiter.waitForEvent(GuildMessageReceivedEvent.class, e -> e.getAuthor().equals(event.getAuthor()) && e.getChannel().equals(event.getChannel()), e -> {
             //First argument is the event we are waiting for. Second is the condition that is checked when the event is triggered. Third is the code that will be run with the event and condition is fulfilled.
             try{
+
                 Member name = e.getMessage().getMentionedMembers().get(0); //This time we grab the name from the waiter event because thats where we are getting the name from
+                String avatar = name.getUser().getAvatarUrl();
                 EmbedBuilder eb = new EmbedBuilder()
                         .setColor(Color.magenta)
-                        .setThumbnail("http://pixelartmaker.com/art/1f41a07add48569.png")
+                        .setThumbnail(avatar)
                         .setAuthor("Information on " + name.getUser().getName(), "http://www.google.com", name.getUser().getAvatarUrl())
                         .setDescription(name.getUser().getName() + " joined on " + name.getTimeJoined().format(fmt) + " :clock: ")
                         .addField("Status:", name.getOnlineStatus().toString(), true)

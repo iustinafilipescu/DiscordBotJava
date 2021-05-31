@@ -13,6 +13,7 @@ public class JoinCommand extends Command {
     public JoinCommand() {
         this.name="join";
         this.help="Bot i joining the server for playing music!";
+        super.category = new Category("Playing music");
     }
     @Override
     protected void execute(CommandEvent event) {

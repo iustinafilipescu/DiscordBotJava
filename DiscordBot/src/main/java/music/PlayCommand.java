@@ -15,7 +15,7 @@ public class PlayCommand extends Command {
         super.name = "play";
         super.help = "Play a song with a specific url";
         super.aliases = new String[]{"play"};
-        super.category = new Category("Members");
+        super.category = new Category("Playing music");
         super.cooldown = 5;
         super.arguments = "[song-url]";
     }

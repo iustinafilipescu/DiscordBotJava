@@ -2,9 +2,6 @@ package commands;
 
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
-import net.dv8tion.jda.api.entities.GuildChannel;
-import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
-import org.jetbrains.annotations.NotNull;
 
 
 public class InviteCommand extends Command {
@@ -12,7 +9,7 @@ public class InviteCommand extends Command {
     public InviteCommand() {
 
         this.name="invite";
-
+        super.category = new Category("Members");
         this.help="Gives an invite link to user";
     }
 

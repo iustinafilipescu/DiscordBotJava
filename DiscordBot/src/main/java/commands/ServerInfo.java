@@ -5,7 +5,6 @@ import com.jagrosh.jdautilities.command.CommandEvent;
 import net.dv8tion.jda.api.EmbedBuilder;
 
 import java.awt.*;
-import java.util.Arrays;
 
 public class ServerInfo extends Command {
 
@@ -13,6 +12,7 @@ public class ServerInfo extends Command {
         this.name="serverinfo";
         this.aliases=new String[]{"server"};
         this.help="Gives information about the server";
+        super.category = new Category("About server and users");
 
     }
 

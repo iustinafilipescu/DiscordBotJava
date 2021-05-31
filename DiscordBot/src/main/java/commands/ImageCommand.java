@@ -15,6 +15,7 @@ public class ImageCommand extends Command {
         this.arguments = "[width] [height] [image-url] [degrees to rotate(optional)]"; //arguments shown in $helpme
         this.cooldown = 10;
         this.help = "Manipulates images. Provide an image link and you can resize and or rotate it.";
+        super.category = new Category("Members");
     }
 
     @Override
