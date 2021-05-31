@@ -16,7 +16,9 @@ Proiectul este impartit pe pachete :
 -	Pachetul rss care contine mai multe clase care implementeaza diferite comenzi ce utilizeaza RSS pentru a prelua continut
 
 Clasa Bot contine functia main iar aici se configureaza botul si i se adauga comenzile create.
+
 O parte din aceasta configuratie consta in a seta prefixul, anume “-“, astfel comenzile vor fi apelate sub forma – numecomanda. De asemenea am adaugat si un HelpWord ( anume -helpme) care atunci cand este apelat se va trimite un mesaj in privat cu detalii despre comenzi.
+
 Eu si Rares ne-am impartit sarcinile in mod egal astfel ca eu m-am ocupat de:
 -	Comanda Hello
 -	Comanda Image
@@ -27,8 +29,11 @@ Eu si Rares ne-am impartit sarcinile in mod egal astfel ca eu m-am ocupat de:
 Pentru comenzile (clasele) QuestionCommand si ShowQuestions din pachetul commands am lucrat impreuna unde eu am adaugat 10 intrebari  + raspunsuri gandite si extrase din primele 5 cursuri ale cursului de Programare Avansata, iar Rares a facut alte 20 de intrebari si raspunsuri din urmatoarele cursuri de PA.
 
 Pentru comanda Hello care extinde clasa Command am folosit un waiter, astfel ca in momentul in care in chatul severului se trimite mesajul -hello, botul va raspunde cu un mesaj in care va saluta inapoi si va cere numele. Utilizatorul va trebui sa raspunda cu un nume care este preluat prin acest waiter iar botul va raspunde cu un salut in formula completa (Hello Iustina! I am JavaBot!). De asemenea daca utilizatorul nu raspunda cu un nume timp de 1 minut, botul va trimite mesajul “Sorry, you took too long”.
+
 In contructorul acestei clase am adaugat cateva specificatii precum numele comenzii (adica cu ce nume va putea fi apelata comanda), un alias (adica cu ce alte nume poate fi apelata comanda), textul pentru help, si categoria din care face parte.
+
 Partea cu help si category folosesc in momentul in care utilizatorul introduce comanda -helpme intrucat in acel moment acesta va primi un mesaj PRIVAT de la bot in care se specifica folosul fiecarei comenzi implemetate, comenzile fiind impartite pe categorii.
+
 Impartirea pe categorii a facut facuta de catre Rares si sunt urmtoarele:
 -	Categoria mambers unde se afla comenzile hello, invite si image
 -	Categoria about server and users unde se afla comenzile serverinfo si userinfo
@@ -53,10 +58,13 @@ Pachetul rss contine 8 clase care reprezinta comenzi ce returneaza mesaje prelua
 -	-SoftEng
 -	-Web
 acesta va primi ultimele 5 postari de pe site-ul corespunzator comenzii.
+
 Fiecare din toate aceste comenzi reprezinta o clasa care extinde clasa Command si are constructor asemantor comenzilor descrise mai sus.  Fiecare clasa foloseste biblioteca ROME pentru a putea extrage postarile din linkul dat.  In acest fel, pentru fiecare postare gasita creez un EmbedBuilder (o casuta) in care introduce titlul postarii si linkul postarii extrase din feedul RSS, topicul postarii si setez si un thumbnail corespunzator topicului. Linkul feedului reprezinta linkul feedului rss corespunzator cate unui site popular cu postari despre topicul corespunzator. 
+
 Am ales cele mai interesante subiecte din IT la momentul actual (dupa parerea mea) astfel un utilizator pasionat de IT va putea folosi una dintre comenzi pentru a se putea informa despre subiectul ales (Java, Python, Cloud Computing, Game Development, iOS, Programming, Software Engineering, Web Development) si pentru a citi diferite Tips & Tricks de programare din acel domeniu.
 
 Comanda Show Questions care se apeleaza prin -JavaQ&A afiseaza in 3 casete cate 10 intrebari la care botul poate raspunde. Intrebarile sunt bazate pe cursurile de Programare Avansata. 
+
 Comanda QuestionCommand raspunde la intrebarea aleasa si se apleaza cu -q nr, unde nr reprezinta numarul intrebari din casetele cu intrebari de mai sus.
 
 
