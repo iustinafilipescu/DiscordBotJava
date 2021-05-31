@@ -57,6 +57,7 @@ Pachetul rss contine 8 clase care reprezinta comenzi ce returneaza mesaje prelua
 -	-Programming
 -	-SoftEng
 -	-Web
+
 acesta va primi ultimele 5 postari de pe site-ul corespunzator comenzii.
 
 Fiecare din toate aceste comenzi reprezinta o clasa care extinde clasa Command si are constructor asemantor comenzilor descrise mai sus.  Fiecare clasa foloseste biblioteca ROME pentru a putea extrage postarile din linkul dat.  In acest fel, pentru fiecare postare gasita creez un EmbedBuilder (o casuta) in care introduce titlul postarii si linkul postarii extrase din feedul RSS, topicul postarii si setez si un thumbnail corespunzator topicului. Linkul feedului reprezinta linkul feedului rss corespunzator cate unui site popular cu postari despre topicul corespunzator. 
