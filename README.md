@@ -1,10 +1,6 @@
 # DiscordBotJava
 
-https://github.com/DV8FromTheWorld/JDA/wiki/8%29-List-of-Events
-
-https://github.com/DV8FromTheWorld/JDA
-
-Iustina:
+IUSTINA:
 
 Pentru realizarea acestui bot am folosit JDA (Java Discord API) https://github.com/DV8FromTheWorld/JDA
 
