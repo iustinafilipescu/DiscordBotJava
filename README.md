@@ -68,3 +68,22 @@ Comanda QuestionCommand raspunde la intrebarea aleasa si se apleaza cu -q nr, un
 
 
 RARES:
+
+Eu m-am ocupat de urmatoarele comenzi:
+-Comanda invite
+-Comanda  UserInfo
+-Comanda Play 
+-Comanda Join
+
+Comanda UserInfo poate fi apelata folosind -user-info urmata de tag-ul userului folosind @ si va returna o caseta (EmbedBuilder) in care se afla informatii despre user precum numele userului, statusul acestuia, ce rol are (daca are), data cand a dat join serverului, poza acestuia de profil si porecla userului folosita pe server.
+
+Comanda Join poate fi apelata folosind -join. Aceasta comanda a fost creata pentru a putea da play unei piese de pe YouTube deoarece botul trebuie sa fie prezent pe canalul de voice. Aceasta comanda "aduce"  botul pe canal. 
+
+Comanda Play este destul de diferita fata de celelalte comenzi deoarece are la baza 4 clase: AudioPlayerSendHandler,GuildMusicManager,PlayerManager,TrackScheduler. Clasa AudioPlayerSendHandler este un wrapper care implementeaza interfata AudioSendHandler, iar clasa TrackScheduler extinde AudioEventAdapter.In GuildMusicManager se creaza player-ul.In TrackScheduler se creeaza ordinea pieselor, daca o piesa se termina si mai este una in queue se trece la urmatoarea automat. In PlayCommand se verfica daca link-ul trimis este url si se creeaza comanda.
+
+In constructorul fiecarei clase care extinde Command am adaugat cateva specificatii precum numele comenzii (adica cu ce nume va putea fi apelata comanda), un alias (adica cu ce alte nume poate fi apelata comanda), textul pentru help, si categoria din care face parte.
+
+Comanda invite se apleaza cu -invite si creeaza un link care poate fi dat la altii pentru a da join serverului. Link-ul este valabil 60 de minute.
+
+
+
