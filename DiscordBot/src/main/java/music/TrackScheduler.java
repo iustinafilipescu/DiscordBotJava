@@ -13,7 +13,7 @@ public class TrackScheduler extends AudioEventAdapter {
     private final BlockingQueue<AudioTrack> queue;
 
     /**
-     * @param player The audio player this scheduler uses
+      The audio player this scheduler uses
      */
     public TrackScheduler(AudioPlayer player) {
         this.player = player;
@@ -23,7 +23,7 @@ public class TrackScheduler extends AudioEventAdapter {
     /**
      * Add the next track to queue or play right away if nothing is in the queue.
      *
-     * @param track The track to play or add to queue.
+     The track to play or add to queue.
      */
     public void queue(AudioTrack track) {
         // Calling startTrack with the noInterrupt set to true will start the track only if nothing is currently playing. If
